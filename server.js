@@ -32,6 +32,9 @@ server.use(session({
 
 const db = new sqlite3.Database("db/database.db");
 
+server.get('/', (req, res) => {
+  res.send('Welcome to the driving school API');
+});
 
 // Register Endpoint
 server.post('/register', async (req, res) => {
